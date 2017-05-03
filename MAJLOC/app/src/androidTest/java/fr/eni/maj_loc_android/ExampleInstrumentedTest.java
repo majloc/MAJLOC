@@ -1,4 +1,4 @@
-package fr.eni.majloc;
+package fr.eni.maj_loc_android;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("fr.eni.majloc", appContext.getPackageName());
+        assertEquals("fr.eni.maj_loc_android", appContext.getPackageName());
     }
 }

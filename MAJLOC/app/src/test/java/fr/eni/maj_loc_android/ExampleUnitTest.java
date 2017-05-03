@@ -1,4 +1,4 @@
-package fr.eni.majloc;
+package fr.eni.maj_loc_android;
 
 import org.junit.Test;
 
