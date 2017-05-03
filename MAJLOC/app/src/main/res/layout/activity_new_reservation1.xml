@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:hint="recherche rapide"
             android:layout_gravity="center"
+            android:focusableInTouchMode="true"
             />
 
         <Button

@@ -12,11 +12,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import fr.eni.maj_loc_android.Reservation.NewReservation1Activity;
-import fr.eni.maj_loc_android.Reservation.NewReservation2Activity;
-import fr.eni.majloc.NewCarActivity1;
 
 public class MainActivity extends AppActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,11 @@ public class MainActivity extends AppActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        
+
+        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        this.getSupportActionBar().setIcon(R.drawable.logolokacarpetit);
         this.getSupportActionBar().setTitle(" Principal");
+
 
 
        /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

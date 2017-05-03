@@ -27,11 +27,13 @@
             android:name=".LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Reservation.NewReservation1_creationActivity" />
         <activity android:name=".Reservation.NewReservation2Activity" />
-        <activity android:name=".Reservation.NewReservation3Activity" />
-        <activity android:name="fr.eni.majloc.NewCarActivity1" />
-        <activity android:name="fr.eni.majloc.NewCarActivity2"/>
-        <activity android:name=".Reservation.NewReservation1Activity"></activity>
+        <activity android:name=".NewCarActivity1" />
+        <activity android:name=".NewCarActivity2" />
+        <activity android:name=".Reservation.NewReservation1Activity" />
+        <activity android:name=".Reservation.NewReservationListeActivity" />
+        <activity android:name="fr.eni.majloc.NewReservationDetailsActivity"></activity>
     </application>
 
 </manifest>
