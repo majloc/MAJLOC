@@ -3,12 +3,12 @@
     package="fr.eni.maj_loc_android">
 
     <application
-        android:theme="@style/AppTheme"
         android:allowBackup="true"
         android:icon="@drawable/logolokacar"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -27,8 +27,11 @@
             android:name=".LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".NewReservation1Activity" />
-        <activity android:name=".NewReservation2Activity"></activity>
+        <activity android:name=".Reservation.NewReservation2Activity" />
+        <activity android:name=".Reservation.NewReservation3Activity" />
+        <activity android:name="fr.eni.majloc.NewCarActivity1" />
+        <activity android:name="fr.eni.majloc.NewCarActivity2"/>
+        <activity android:name=".Reservation.NewReservation1Activity"></activity>
     </application>
 
 </manifest>

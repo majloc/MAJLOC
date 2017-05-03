@@ -31,6 +31,7 @@ public class AppActivity extends AppCompatActivity {
         if(getSupportActionBar()!=null) {
             if(!(this instanceof LoginActivity))
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            this.getSupportActionBar().setIcon(R.drawable.logolokacarpetit);
         }
     }
 }

@@ -3,13 +3,14 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:onClick="showNewCar1"
             android:id="@+id/nav_camera"
             android:icon="@android:drawable/ic_menu_add"
             android:title="Enregistrer nouvelle voiture" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@android:drawable/ic_menu_edit"
-            android:title="Editer voiture" />
+            android:title="Liste toutes voitures" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@android:drawable/ic_menu_slideshow"
@@ -17,7 +18,7 @@
         <item
             android:id="@+id/nav_manage"
             android:icon="@android:drawable/ic_menu_slideshow"
-            android:title="Liste voitures non louées" />
+            android:title="Liste voitures dispos" />
     </group>
 
     <item android:title="Autre">

@@ -11,6 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import fr.eni.maj_loc_android.Reservation.NewReservation1Activity;
+import fr.eni.maj_loc_android.Reservation.NewReservation2Activity;
+import fr.eni.majloc.NewCarActivity1;
+
 public class MainActivity extends AppActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -20,10 +24,8 @@ public class MainActivity extends AppActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        this.getSupportActionBar().setDisplayShowHomeEnabled(true);
-        this.getSupportActionBar().setIcon(R.drawable.logolokacarpetit);
-        this.getSupportActionBar().setTitle("MajLoc");
+        
+        this.getSupportActionBar().setTitle(" Principal");
 
 
        /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -107,5 +109,10 @@ public class MainActivity extends AppActivity
         Intent intent = new Intent(MainActivity.this, NewReservation1Activity.class);
         startActivity(intent);
 
+    }
+
+    public void showNewCar1(MenuItem item) {
+        Intent intent = new Intent(MainActivity.this, NewCarActivity1.class);
+        startActivity(intent);
     }
 }

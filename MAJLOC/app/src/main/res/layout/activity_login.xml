@@ -8,7 +8,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/logolokacar"/>
+        android:src="@drawable/logolokacar"
+        android:layout_marginTop="30dp"/>
 
     <TextView
         android:id="@+id/textViewLogin"
@@ -18,13 +19,17 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginTop="50dp"
+        android:gravity="center"
+
         />
     <EditText
         android:id="@+id/editTextLogin"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="Saisissez votre login"
-        android:textSize="15sp"/>
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        />
 
     <TextView
         android:id="@+id/textViewMdp"
@@ -33,13 +38,17 @@
         android:text="Mot de passe:"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        />
     <EditText
         android:id="@+id/editTextMdp"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="Saisissez votre mdp"
-        android:textSize="15sp"/>
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        />
 
     <Button
         android:onClick="showHome"
