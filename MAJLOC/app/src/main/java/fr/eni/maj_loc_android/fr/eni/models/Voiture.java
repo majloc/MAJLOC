@@ -2,9 +2,6 @@ package fr.eni.maj_loc_android.fr.eni.models;
 
 import java.io.Serializable;
 
-/**
- * Created by Administrateur on 03/05/2017.
- */
 
 public class Voiture implements Serializable {
 
