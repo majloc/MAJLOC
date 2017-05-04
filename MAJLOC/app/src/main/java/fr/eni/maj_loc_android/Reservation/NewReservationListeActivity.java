@@ -2,13 +2,11 @@ package fr.eni.maj_loc_android.Reservation;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,9 +33,6 @@ public class NewReservationListeActivity extends AppActivity implements AdapterV
 
 
         myListeVoitures = new ArrayList<>();
-        myListeVoitures.add(new Voiture("Renault", "Clio 4", "AA-880-AA"));
-        myListeVoitures.add(new Voiture("Peugeot", "308", "BB-777-BB"));
-        myListeVoitures.add(new Voiture("Audi", "A3", "CC-777-CC"));
 
 
         listViewVoitures = (ListView) findViewById(R.id.listVoituresResa);

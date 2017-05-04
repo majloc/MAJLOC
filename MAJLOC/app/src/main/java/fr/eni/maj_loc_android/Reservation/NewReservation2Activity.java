@@ -31,29 +31,34 @@ public class NewReservation2Activity extends AppActivity {
         this.getSupportActionBar().setTitle(" NewResa");
 
         listeTypes = new ArrayList<>();
+        listeTypes.add("Tous");
         listeTypes.add("Citadine");
         listeTypes.add("Berline");
         listeTypes.add("Monospace");
         listeTypes.add("Utilitaire");
 
         listeEnergies = new ArrayList<>();
-        //listeEnergies.add(Energie.lesEnergies);
+        listeEnergies.add("Toutes");
         listeEnergies.add("Essence");
         listeEnergies.add("Diesel");
         listeEnergies.add("Hybride");
         listeEnergies.add("Electrique");
 
         listeMarques = new ArrayList<>();
-        listeMarques.add("Peu importe");
+        listeMarques.add("Toutes");
         listeMarques.add("Renault");
         listeMarques.add("Peugeot");
         listeMarques.add("Citroen");
         listeMarques.add("Fiat");
         listeMarques.add("BMW");
         listeMarques.add("Audi");
+        listeMarques.add("Lexus");
 
         listeModeles = new ArrayList<>();
-        listeModeles.add("Clio 4");
+        listeModeles.add("Tous");
+        listeModeles.add("Clio");
+        listeModeles.add("Scenic");
+        listeModeles.add("GS 300h");
 
 
         textPrix = (TextView) findViewById(R.id.textPrix);
@@ -61,7 +66,7 @@ public class NewReservation2Activity extends AppActivity {
         spinType = (Spinner) findViewById(R.id.spinType);
         spinEnergie = (Spinner) findViewById(R.id.spinEnergie);
         spinMarque = (Spinner) findViewById(R.id.spinMarque);
-        //spinModele = (Spinner) findViewById(R.id.spinModele);
+        spinModele = (Spinner) findViewById(R.id.spinModele);
 
 
 
@@ -74,12 +79,13 @@ public class NewReservation2Activity extends AppActivity {
         ArrayAdapter<String> adapterMarque = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, listeMarques);
 
-        //ArrayAdapter<String> adapterModele = new ArrayAdapter<String>(this,
-                //android.R.layout.simple_spinner_item, listeModeles);
+        ArrayAdapter<String> adapterModele = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, listeModeles);
 
         spinType.setAdapter(adapterType);
         spinEnergie.setAdapter(adapterEnergie);
         spinMarque.setAdapter(adapterMarque);
+        spinModele.setAdapter(adapterModele);
         seekPrix.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -96,7 +102,7 @@ public class NewReservation2Activity extends AppActivity {
 
             }
         });
-        //spinModele.setAdapter(adapterModele);
+
 
 
     }

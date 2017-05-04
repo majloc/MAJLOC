@@ -55,6 +55,19 @@
 
     <TextView
         android:layout_marginTop="40dp"
+        android:text="Modèle"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Spinner
+        android:id="@+id/spinModele"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="40dp"
         android:text="Prix/jour"
         android:gravity="center"
         android:layout_width="match_parent"
