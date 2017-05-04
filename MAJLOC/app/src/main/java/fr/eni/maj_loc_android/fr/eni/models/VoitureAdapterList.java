@@ -43,8 +43,8 @@ public class VoitureAdapterList extends ArrayAdapter<Voiture> {
         Voiture item = getItem(position);
         marque.setText( item.getMarque());
         modele.setText( item.getModele());
-        energie.setText((CharSequence) item.getEnergie());
-        type.setText((CharSequence) item.getType());
+        energie.setText(item.getEnergie().getEnergie().toString());
+        type.setText(item.getType().getType().toString());
 
         return view;
     }

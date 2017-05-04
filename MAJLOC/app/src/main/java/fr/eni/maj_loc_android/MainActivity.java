@@ -91,7 +91,9 @@ public class MainActivity extends AppActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_allcars) {
+            Intent intent = new Intent(MainActivity.this, ListAllCarsActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_slideshow) {
 

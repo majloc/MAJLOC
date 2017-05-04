@@ -2,12 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.eni.maj_loc_android">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+ <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <uses-feature android:name="android.hardware.camera" />
-
-    <application
+    <uses-feature android:name="android.hardware.camera" />    <application
         android:allowBackup="true"
         android:icon="@drawable/logolokacar"
         android:label="@string/app_name"
@@ -39,6 +37,8 @@
         <activity android:name=".Reservation.NewReservation1Activity" />
         <activity android:name=".Reservation.NewReservationListeActivity" />
         <activity android:name="fr.eni.majloc.NewReservationDetailsActivity" />
+        <activity android:name=".ListAllCarsActivity"></activity>
+
         <activity android:name="fr.eni.majloc.RetourActivity" />
         <activity android:name="fr.eni.majloc.EtatLieuxActivity" />
 
@@ -46,7 +46,6 @@
 
         <activity android:name=".PhotoActivity"
             android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-    </application>
+        </activity>    </application>
 
 </manifest>
