@@ -33,7 +33,8 @@
         <activity android:name=".NewCarActivity2" />
         <activity android:name=".Reservation.NewReservation1Activity" />
         <activity android:name=".Reservation.NewReservationListeActivity" />
-        <activity android:name="fr.eni.majloc.NewReservationDetailsActivity"></activity>
+        <activity android:name="fr.eni.majloc.NewReservationDetailsActivity" />
+        <activity android:name=".ListAllCarsActivity"></activity>
     </application>
 
 </manifest>

@@ -18,7 +18,8 @@
             android:id="@+id/marque"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            tools:text="marque"/>
 
 
         <TextView
@@ -26,7 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            tools:text="modele"/>
 
     </LinearLayout>
 
@@ -36,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/linearMarque"
+        tools:text="energie"
         />
 
     <TextView
@@ -43,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/energie"
+        tools:text="type"
         />
 
     <TextView
@@ -50,6 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/type"
+        tools:text="immatriculation"
         />
 
     <TextView
@@ -57,13 +62,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/immatriculation"
+        tools:text="nbplaces"
         />
 
     <ImageView
         android:id="@+id/photo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/type"/>
+        android:layout_below="@id/type"
+        tools:text="image"/>
 
     <Button
         android:layout_width="wrap_content"
