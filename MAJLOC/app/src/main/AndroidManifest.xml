@@ -34,8 +34,12 @@
         <activity android:name=".Reservation.NewReservation1Activity" />
         <activity android:name=".Reservation.NewReservationListeActivity" />
         <activity android:name="fr.eni.majloc.NewReservationDetailsActivity" />
+<<<<<<< HEAD
         <activity android:name="fr.eni.majloc.RetourActivity" />
         <activity android:name="fr.eni.majloc.EtatLieuxActivity"></activity>
+=======
+        <activity android:name=".ListAllCarsActivity"></activity>
+>>>>>>> bff319df0531ea30c07fcab4650ed8836e9fb163
     </application>
 
 </manifest>
