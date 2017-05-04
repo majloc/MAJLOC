@@ -1,8 +1,7 @@
-package fr.eni.maj_loc_android;
+package fr.eni.maj_loc_android.fr.eni.models;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import com.android.volley.Request;
@@ -14,26 +13,18 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import fr.eni.maj_loc_android.fr.eni.models.Voiture;
-import fr.eni.maj_loc_android.fr.eni.models.VoitureAdapterList;
-
-public class ListAllCarsActivity extends AppActivity implements AdapterView.OnItemClickListener {
-
-    List<Voiture> listallcars = new ArrayList<>();
-    private ListView listViewAllCars;
-    private VoitureAdapterList voitureadapter;
+import fr.eni.maj_loc_android.ListAllCarsActivity;
+import fr.eni.maj_loc_android.R;
 
 
-
+public class ListCarsLouesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_all_cars);
-
+        setContentView(R.layout.activity_list_cars_loues);
 
 
         listViewAllCars = (ListView) findViewById(R.id.listViewAllCars);
@@ -64,7 +55,7 @@ public class ListAllCarsActivity extends AppActivity implements AdapterView.OnIt
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                    if (error.networkResponse != null) {
+                if (error.networkResponse != null) {
                     String response = new String(error.networkResponse.data);
 
 
@@ -80,8 +71,5 @@ public class ListAllCarsActivity extends AppActivity implements AdapterView.OnIt
     }
 
 
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-    }
+}
 }

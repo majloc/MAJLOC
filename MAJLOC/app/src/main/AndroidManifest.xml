@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.eni.maj_loc_android">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -37,7 +37,8 @@
         <activity android:name=".Reservation.NewReservation1Activity" />
         <activity android:name=".Reservation.NewReservationListeActivity" />
         <activity android:name="fr.eni.majloc.NewReservationDetailsActivity" />
-        <activity android:name=".ListAllCarsActivity"></activity>
+        <activity android:name=".ListAllCarsActivity" />
+        <activity android:name=".fr.eni.models.ListCarsLouesActivity"></activity>
     </application>
 
 </manifest>
