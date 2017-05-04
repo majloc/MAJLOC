@@ -12,7 +12,7 @@
             android:icon="@android:drawable/ic_menu_edit"
             android:title="Liste toutes voitures" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_carsloues"
             android:icon="@android:drawable/ic_menu_slideshow"
             android:title="Liste voitures louées" />
         <item

@@ -1,6 +1,7 @@
 package fr.eni.maj_loc_android.fr.eni.models;
 
 import java.io.Serializable;
+import java.util.List;
 
 
 public class Voiture implements Serializable {
@@ -13,9 +14,23 @@ public class Voiture implements Serializable {
     private String modele;
     private Type type;
     private Energie energie;
-    private String photo;
-    private int nbPlaces;
+    private List<String> photos;
+    private int nbPlace;
+    private boolean loue;
 
+    public Voiture(int id, Agence agence, double prix_jour, String plaque, String marque, String modele, Type type, Energie energie, List<String> photos, int nbPlaces, boolean loue) {
+        this.id = id;
+        this.agence = agence;
+        this.prix_jour = prix_jour;
+        this.plaque = plaque;
+        this.marque = marque;
+        this.modele = modele;
+        this.type = type;
+        this.energie = energie;
+        this.photos = photos;
+        this.nbPlace = nbPlaces;
+        this.loue = loue;
+    }
 
     public Voiture() {
     }
@@ -27,7 +42,7 @@ public class Voiture implements Serializable {
     }
 
     public Voiture(Agence agence, double prix_jour, String plaque, String marque, String modele,
-                   Type type, Energie energie, String photo, int nbPlaces) {
+                   Type type, Energie energie, List<String> photos, int nbPlaces) {
         this.agence = agence;
         this.prix_jour = prix_jour;
         this.plaque = plaque;
@@ -35,12 +50,12 @@ public class Voiture implements Serializable {
         this.modele = modele;
         this.type = type;
         this.energie = energie;
-        this.photo = photo;
-        this.nbPlaces = nbPlaces;
+        this.photos = photos;
+        this.nbPlace = nbPlaces;
     }
 
     public Voiture(int id, Agence agence, double prix_jour, String plaque, String marque, String modele,
-                   Type type, Energie energie, String photo, int nbPlaces) {
+                   Type type, Energie energie, List<String> photos, int nbPlaces) {
         this.id = id;
         this.agence = agence;
         this.prix_jour = prix_jour;
@@ -49,8 +64,8 @@ public class Voiture implements Serializable {
         this.modele = modele;
         this.type = type;
         this.energie = energie;
-        this.photo = photo;
-        this.nbPlaces = nbPlaces;
+        this.photos = photos;
+        this.nbPlace = nbPlaces;
     }
 
     public int getId() {
@@ -113,19 +128,27 @@ public class Voiture implements Serializable {
         this.energie = energie;
     }
 
-    public String getPhoto() {
-        return photo;
+    public List<String>  getPhoto() {
+        return photos;
     }
 
-    public void setPhoto(String photo) {
-        this.photo = photo;
+    public void setPhoto(List<String> photos) {
+        this.photos = photos;
     }
 
-    public int getNbPlaces() {
-        return nbPlaces;
+    public int getNbPlace() {
+        return nbPlace;
     }
 
-    public void setNbPlaces(int nbPlaces) {
-        this.nbPlaces = nbPlaces;
+    public void setNbPlace(int nbPlace) {
+        this.nbPlace = nbPlace;
+    }
+
+    public boolean isLoue() {
+        return loue;
+    }
+
+    public void setLoue(boolean loue) {
+        this.loue = loue;
     }
 }

@@ -13,18 +13,22 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import fr.eni.maj_loc_android.ListAllCarsActivity;
 import fr.eni.maj_loc_android.R;
 
 
 public class ListCarsLouesActivity extends AppCompatActivity {
 
+    List<Voiture> listallcars = new ArrayList<>();
+    private ListView listViewAllCars;
+    private VoitureAdapterList voitureadapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_cars_loues);
+        setContentView(R.layout.activity_list_all_cars);
 
 
         listViewAllCars = (ListView) findViewById(R.id.listViewAllCars);
@@ -32,8 +36,8 @@ public class ListCarsLouesActivity extends AppCompatActivity {
 
 
         // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(ListAllCarsActivity.this);
-        String url = "http://10.4.140.27:8080/WEBMAJLOC/rest/voiture/allcars";
+        RequestQueue queue = Volley.newRequestQueue(ListCarsLouesActivity.this);
+        String url = "http://10.4.140.27:8080/WEBMAJLOC/rest/voiture/statut?loue=true";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -44,10 +48,10 @@ public class ListCarsLouesActivity extends AppCompatActivity {
                         Gson gson = new Gson();
 
                         listallcars = gson.fromJson(response, new TypeToken<List<Voiture>>(){}.getType());
-                        voitureadapter = new VoitureAdapterList(ListAllCarsActivity.this,0,listallcars);
+                        voitureadapter = new VoitureAdapterList(ListCarsLouesActivity.this,0,listallcars);
 
                         listViewAllCars.setAdapter(voitureadapter);
-                        listViewAllCars.setOnItemClickListener(ListAllCarsActivity.this);
+                       // listViewAllCars.setOnItemClickListener(ListCarsLouesActivity.this);
 
                     }
                 }, new Response.ErrorListener() {
@@ -71,5 +75,4 @@ public class ListCarsLouesActivity extends AppCompatActivity {
     }
 
 
-}
 }
