@@ -43,7 +43,7 @@ public class ClientAdapter extends ArrayAdapter<Client> {
         Client item = getItem(position);
         nom.setText( item.getNom());
         prenom.setText( item.getPrennom());
-        mail.setText( item.getEmail());
+        mail.setText( item.getMail());
         adresse.setText( item.getAdresse());
 
         return view;

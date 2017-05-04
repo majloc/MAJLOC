@@ -13,6 +13,8 @@ import java.util.List;
 
 import fr.eni.maj_loc_android.AppActivity;
 import fr.eni.maj_loc_android.R;
+import fr.eni.maj_loc_android.fr.eni.models.Client;
+import fr.eni.maj_loc_android.fr.eni.models.Voiture;
 
 public class NewReservation2Activity extends AppActivity {
 
@@ -25,6 +27,8 @@ public class NewReservation2Activity extends AppActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_reservation2);
+
+        Client client = (Client) getIntent().getExtras().get("client");
 
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.getSupportActionBar().setIcon(R.drawable.logolokacarpetit);

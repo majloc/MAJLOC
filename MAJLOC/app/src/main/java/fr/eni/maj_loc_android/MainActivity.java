@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import fr.eni.maj_loc_android.Reservation.NewReservation1Activity;
+import fr.eni.majloc.RetourActivity;
 
 public class MainActivity extends AppActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -90,7 +91,9 @@ public class MainActivity extends AppActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_allcars) {
+            Intent intent = new Intent(MainActivity.this, ListAllCarsActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_slideshow) {
 
@@ -116,6 +119,11 @@ public class MainActivity extends AppActivity
 
     public void showNewCar1(MenuItem item) {
         Intent intent = new Intent(MainActivity.this, NewCarActivity1.class);
+        startActivity(intent);
+    }
+
+    public void showRetour(View view) {
+        Intent intent = new Intent(MainActivity.this, RetourActivity.class);
         startActivity(intent);
     }
 }
