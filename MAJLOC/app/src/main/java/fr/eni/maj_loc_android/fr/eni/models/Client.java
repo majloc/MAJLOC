@@ -11,7 +11,7 @@ public class Client implements Serializable {
     private int id;
     private String nom;
     private String prennom;
-    private String email;
+    private String mail;
     private String tel;
     private String adresse;
 
@@ -22,7 +22,7 @@ public class Client implements Serializable {
     public Client(String nom, String prennom, String email, String tel, String adresse) {
         this.nom = nom;
         this.prennom = prennom;
-        this.email = email;
+        this.mail = email;
         this.tel = tel;
         this.adresse = adresse;
     }
@@ -31,7 +31,7 @@ public class Client implements Serializable {
         this.id = id;
         this.nom = nom;
         this.prennom = prennom;
-        this.email = email;
+        this.mail = email;
         this.tel = tel;
         this.adresse = adresse;
     }
@@ -56,12 +56,12 @@ public class Client implements Serializable {
         this.prennom = prennom;
     }
 
-    public String getEmail() {
-        return email;
+    public String getMail() {
+        return mail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
     public String getTel() {

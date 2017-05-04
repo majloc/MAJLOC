@@ -12,8 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import fr.eni.maj_loc_android.Reservation.NewReservation1Activity;
-import fr.eni.maj_loc_android.fr.eni.models.ListCarsLouesActivity;
-
+import fr.eni.majloc.RetourActivity;import fr.eni.maj_loc_android.fr.eni.models.ListCarsLouesActivity;
 public class MainActivity extends AppActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -121,6 +120,11 @@ public class MainActivity extends AppActivity
 
     public void showNewCar1(MenuItem item) {
         Intent intent = new Intent(MainActivity.this, NewCarActivity1.class);
+        startActivity(intent);
+    }
+
+    public void showRetour(View view) {
+        Intent intent = new Intent(MainActivity.this, RetourActivity.class);
         startActivity(intent);
     }
 }

@@ -23,4 +23,6 @@ public class NewCarActivity2 extends AppActivity {
 
     }
 
+    public void PrendrePhotos(View view) {
+    }
 }
