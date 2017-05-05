@@ -32,26 +32,26 @@ public class NewCarActivity1 extends AppActivity {
 
         listeTypes = new ArrayList<>();
         listeTypes.add("Selectionner un type");
-        listeTypes.add("Citadine");
-        listeTypes.add("Berline");
-        listeTypes.add("Monospace");
-        listeTypes.add("Utilitaire");
+        listeTypes.add("citadine");
+        listeTypes.add("berline");
+        listeTypes.add("monospace");
+        listeTypes.add("utilitaire");
 
         listeEnergies = new ArrayList<>();
         listeEnergies.add("Selectionner une energie");
-        listeEnergies.add("Essence");
-        listeEnergies.add("Diesel");
-        listeEnergies.add("Hybride");
-        listeEnergies.add("Electrique");
+        listeEnergies.add("essence");
+        listeEnergies.add("diesel");
+        listeEnergies.add("hybride");
+        listeEnergies.add("electrique");
 
         listeMarques = new ArrayList<>();
         listeMarques.add("Selectionner une marque");
-        listeMarques.add("Renault");
-        listeMarques.add("Peugeot");
-        listeMarques.add("Citroen");
-        listeMarques.add("Fiat");
-        listeMarques.add("BMW");
-        listeMarques.add("Audi");
+        listeMarques.add("renault");
+        listeMarques.add("peugeot");
+        listeMarques.add("citroen");
+        listeMarques.add("fiat");
+        listeMarques.add("bmw");
+        listeMarques.add("audi");
 
 
         spinType = (Spinner) findViewById(R.id.spinType);

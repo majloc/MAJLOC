@@ -15,21 +15,30 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.IOException;
+import java.text.Normalizer;
+import java.text.Normalizer.Form;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import fr.eni.maj_loc_android.LoginActivity;
 import fr.eni.maj_loc_android.utils.AppActivity;
 import fr.eni.maj_loc_android.MainActivity;
 import fr.eni.maj_loc_android.utils.PhotoActivity;
@@ -64,9 +73,9 @@ public class NewCarActivity2 extends AppActivity {
         editNBPlaces = (EditText) findViewById(R.id.editNbPlaces);
 
 
-        photo = "photo1";
+        photo = "photo1;";
         agence = "LocaWhaa";
-        nbPlaces = editNBPlaces.getText().toString();
+
 
 
 
@@ -151,28 +160,56 @@ public class NewCarActivity2 extends AppActivity {
 
         prix = editPrix.getText().toString();
         immat = editImmat.getText().toString();
+        nbPlaces = editNBPlaces.getText().toString();
 
         RequestQueue queue = Volley.newRequestQueue(NewCarActivity2.this);
         String url = "http://10.4.140.27:8080/WEBMAJLOC/rest/voiture/newcar";
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+        StringRequest jsonObjRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Gson json = new Gson();
-                Log.i("e", "passage dans onResponse");
-                messageRetour = json.toJson(response, new TypeToken<List<String>>() {
-                }.getType());
+                Toast.makeText(NewCarActivity2.this, "Voiture OK!", Toast.LENGTH_LONG).show();
             }
-        }, new Response.ErrorListener() {
+
+
+                }, new Response.ErrorListener() {
+
+
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Toast.makeText(NewCarActivity2.this, "Voiture PAS!", Toast.LENGTH_LONG).show();
             }
-        });
+        }) {
 
-        queue.add(stringRequest);
+            @Override
+            public String getBodyContentType() {
+                return "application/x-www-form-urlencoded; charset=UTF-8";
+            }
 
-        //TODO: enregistrer la voiture comme etant retournée
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("marque", marque);
+                params.put("modele", modele);
+                params.put("type", type);
+                params.put("energie", energie);
+                params.put("plaque", immat);
+                params.put("prixParJour", prix);
+                params.put("nbPlace", nbPlaces);
+                params.put("photos", photo);
+                params.put("agence", agence);
+                return params;
+            }
+
+        };
+
+
+
+        //AppController.getInstance().addToRequestQueue(jsonObjRequest);
+
+        queue.add(jsonObjRequest);
+
+        //TODO: enregistrer la voiture comme etant Créée
 
         Toast.makeText(NewCarActivity2.this, "Voiture enregistrée",Toast.LENGTH_SHORT).show();
 
