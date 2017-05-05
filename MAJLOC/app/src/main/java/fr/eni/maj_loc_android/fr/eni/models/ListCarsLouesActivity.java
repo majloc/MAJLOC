@@ -36,6 +36,8 @@ public class ListCarsLouesActivity extends AppCompatActivity {
 
 
         // Instantiate the RequestQueue.
+        RequestQueue queue = Volley.newRequestQueue(ListCarsLouesActivity.this);
+        String url = "http://10.4.140.27:8080/WEBMAJLOC/rest/voiture/allcars";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -49,7 +51,7 @@ public class ListCarsLouesActivity extends AppCompatActivity {
                         voitureadapter = new VoitureAdapterList(ListCarsLouesActivity.this,0,listallcars);
 
                         listViewAllCars.setAdapter(voitureadapter);
-listViewAllCars.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        listViewAllCars.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                             @Override
                             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                                 return false;
@@ -76,5 +78,4 @@ listViewAllCars.setOnItemLongClickListener(new AdapterView.OnItemLongClickListen
 
     }
 
-}
 }
