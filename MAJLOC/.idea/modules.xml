@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MAJLOC.iml" filepath="$PROJECT_DIR$/MAJLOC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MAJLOC.iml" filepath="$PROJECT_DIR$/MAJLOC.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-photo/library-photo.iml" filepath="$PROJECT_DIR$/library-photo/library-photo.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-photo/library-photo.iml" filepath="$PROJECT_DIR$/library-photo/library-photo.iml" />
     </modules>
   </component>

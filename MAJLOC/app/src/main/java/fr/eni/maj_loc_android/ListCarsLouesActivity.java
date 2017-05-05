@@ -1,7 +1,6 @@
 package fr.eni.maj_loc_android;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -20,16 +19,19 @@ import java.util.List;
 
 import fr.eni.maj_loc_android.Models.Voiture;
 import fr.eni.maj_loc_android.Models.VoitureAdapterList;
+import fr.eni.maj_loc_android.utils.AppActivity;
 
 
-public class ListCarsLouesActivity extends AppCompatActivity {
+public class ListCarsLouesActivity extends AppActivity implements AdapterView.OnItemClickListener{
 
     private List<Voiture> listallcars = new ArrayList<>();
     private ListView listViewAllCars;
-    private VoitureAdapterList voitureadapter;    @Override
+    private VoitureAdapterList voitureadapter;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_all_cars);
+        setContentView(R.layout.activity_list_cars_loues);
 
 
         listViewAllCars = (ListView) findViewById(R.id.listViewAllCars);
@@ -38,7 +40,7 @@ public class ListCarsLouesActivity extends AppCompatActivity {
 
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(ListCarsLouesActivity.this);
-        String url = "http://10.4.140.27:8080/WEBMAJLOC/rest/voiture/allcars";
+        String url = "http://10.4.140.27:8080/WEBMAJLOC/rest/voiture/statut?loue=true";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -52,12 +54,9 @@ public class ListCarsLouesActivity extends AppCompatActivity {
                         voitureadapter = new VoitureAdapterList(ListCarsLouesActivity.this,0,listallcars);
 
                         listViewAllCars.setAdapter(voitureadapter);
-        listViewAllCars.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-                            @Override
-                            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                                return false;
-                            }
-                        });
+                        listViewAllCars.setOnItemClickListener(ListCarsLouesActivity.this);
+
+
                     }
                 }, new Response.ErrorListener() {
 
@@ -75,8 +74,10 @@ public class ListCarsLouesActivity extends AppCompatActivity {
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
 
-
-
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+    }
 }
