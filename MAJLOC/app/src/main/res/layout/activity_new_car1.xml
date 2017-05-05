@@ -22,6 +22,7 @@
         android:text="Type"
         android:gravity="center"
         android:layout_width="match_parent"
+        android:textStyle="bold"
         android:layout_height="wrap_content" />
     <Spinner
         android:id="@+id/spinType"
@@ -32,6 +33,7 @@
     <TextView
         android:layout_marginTop="40dp"
         android:text="Energie"
+        android:textStyle="bold"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -44,6 +46,7 @@
     <TextView
         android:layout_marginTop="40dp"
         android:text="Marque"
+        android:textStyle="bold"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -57,13 +60,15 @@
     <TextView
         android:layout_marginTop="40dp"
         android:text="Modele"
+        android:textStyle="bold"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <Spinner
-        android:id="@+id/spinModele"
+    <EditText
+        android:id="@+id/editModele"
         android:layout_width="300dp"
+        android:hint="indiquer le modele"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         />

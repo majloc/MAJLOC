@@ -17,7 +17,7 @@
 
 
     <TextView
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         android:text="Immatriculation"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -28,19 +28,32 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
 
+    <TextView
+        android:layout_marginTop="30dp"
+        android:text="Immatriculation"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/editNbPlaces"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="30dp">
 
     <TextView
         android:text="Prix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <EditText
+        android:id="@+id/editPrix"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp">
@@ -61,7 +74,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="70dp">
+        android:layout_marginTop="40dp">
 
         <TextView
             android:text="Photo(s)"
@@ -81,7 +94,8 @@
 
 
     <Button
-        android:layout_marginTop="70dp"
+        android:onClick="insertCar"
+        android:layout_marginTop="50dp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Valider"

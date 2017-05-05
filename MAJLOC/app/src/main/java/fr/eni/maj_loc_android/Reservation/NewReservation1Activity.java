@@ -55,8 +55,6 @@ public class NewReservation1Activity extends AppActivity implements AdapterView.
             public void onResponse(String response) {
                 Gson json = new Gson();
 
-                Log.i("f", "onresponse");
-
                 listViewClients = (ListView) findViewById(R.id.listClients);
 
                 myListeClients = json.fromJson(response, new TypeToken<List<Client>>() {
@@ -69,22 +67,12 @@ public class NewReservation1Activity extends AppActivity implements AdapterView.
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.i("h", "onerror");
+
             }
         });
 
         queue.add(stringRequest);
 
-        /*myListeClients = new ArrayList<>();
-        myListeClients.add(new Client("Sam", "Gratte", "samgratte@gmail.com", "0200000000", "20 rue des acacias"));
-        myListeClients.add(new Client("Yvan", "Dubois", "yvandubois@gmail.com", "0200000000", "10 rue des mimosas"));
-        myListeClients.add(new Client("Eva", "Pabien", "evapabien@gmail.com", "0200000000", "5 rue des tulipes"));
-        myListeClients.add(new Client("Anne", "Homalie", "annehomalie@gmail.com", "0200000000", "50 rue des roses"));
-
-        listViewClients = (ListView) findViewById(R.id.listClients);
-        adapter = new ClientAdapter(NewReservation1Activity.this,0,myListeClients);
-        listViewClients.setAdapter(adapter);
-        listViewClients.setOnItemClickListener(this);*/
 
     }
 
