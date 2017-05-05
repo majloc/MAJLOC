@@ -23,6 +23,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import fr.eni.maj_loc_android.MainActivity;
+import fr.eni.maj_loc_android.NewCarActivity2;
 import fr.eni.maj_loc_android.PhotoActivity;
 import fr.eni.maj_loc_android.R;
 import fr.eni.maj_loc_android.fr.eni.models.Voiture;
@@ -135,4 +137,14 @@ public class EtatLieuxActivity extends AppCompatActivity {
     }
 
 
+    public void retourAccueil(View view) {
+
+
+
+
+        Toast.makeText(EtatLieuxActivity.this, "Retour enregistré, passer au paiement",Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent(EtatLieuxActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
 }
