@@ -15,6 +15,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import fr.eni.maj_loc_android.R;
@@ -22,14 +23,12 @@ import fr.eni.maj_loc_android.R;
 
 public class ListCarsLouesActivity extends AppCompatActivity {
 
-    private List<Voiture> listallcars;
+    private List<Voiture> listallcars = new ArrayList<>();
     private ListView listViewAllCars;
-    private VoitureAdapterList voitureadapter;
-
-    @Override
+    private VoitureAdapterList voitureadapter;    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_cars_loues);
+        setContentView(R.layout.activity_list_all_cars);
 
 
         listViewAllCars = (ListView) findViewById(R.id.listViewAllCars);
@@ -37,8 +36,6 @@ public class ListCarsLouesActivity extends AppCompatActivity {
 
 
         // Instantiate the RequestQueue.
-        RequestQueue queue = Volley.newRequestQueue(ListCarsLouesActivity.this);
-        String url = "http://10.4.140.27:8080/WEBMAJLOC/rest/voiture/allcars";
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
@@ -52,13 +49,12 @@ public class ListCarsLouesActivity extends AppCompatActivity {
                         voitureadapter = new VoitureAdapterList(ListCarsLouesActivity.this,0,listallcars);
 
                         listViewAllCars.setAdapter(voitureadapter);
-                        listViewAllCars.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+listViewAllCars.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                             @Override
                             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                                 return false;
                             }
                         });
-
                     }
                 }, new Response.ErrorListener() {
 
@@ -80,6 +76,5 @@ public class ListCarsLouesActivity extends AppCompatActivity {
 
     }
 
-
 }
-
+}
