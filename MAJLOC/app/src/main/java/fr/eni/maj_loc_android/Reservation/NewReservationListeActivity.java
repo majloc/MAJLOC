@@ -10,11 +10,10 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.eni.maj_loc_android.AppActivity;
+import fr.eni.maj_loc_android.utils.AppActivity;
 import fr.eni.maj_loc_android.R;
-import fr.eni.maj_loc_android.fr.eni.models.Voiture;
-import fr.eni.maj_loc_android.fr.eni.models.VoitureAdapterList;
-import fr.eni.majloc.NewReservationDetailsActivity;
+import fr.eni.maj_loc_android.Models.Voiture;
+import fr.eni.maj_loc_android.Models.VoitureAdapterList;
 
 public class NewReservationListeActivity extends AppActivity implements AdapterView.OnItemClickListener{
 

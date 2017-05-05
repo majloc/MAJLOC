@@ -1,4 +1,4 @@
-package fr.eni.maj_loc_android;
+package fr.eni.maj_loc_android.NewCar;
 
 import android.Manifest;
 import android.content.Intent;
@@ -9,15 +9,10 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -35,14 +30,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import fr.eni.maj_loc_android.AppActivity;
+import fr.eni.maj_loc_android.utils.AppActivity;
+import fr.eni.maj_loc_android.MainActivity;
+import fr.eni.maj_loc_android.utils.PhotoActivity;
 import fr.eni.maj_loc_android.R;
-import fr.eni.maj_loc_android.Reservation.NewReservation1Activity;
-import fr.eni.maj_loc_android.fr.eni.models.Agence;
-import fr.eni.maj_loc_android.fr.eni.models.Client;
-import fr.eni.maj_loc_android.fr.eni.models.ClientAdapter;
-import fr.eni.maj_loc_android.fr.eni.models.Voiture;
-import fr.eni.majloc.EtatLieuxActivity;
 
 public class NewCarActivity2 extends AppActivity {
 

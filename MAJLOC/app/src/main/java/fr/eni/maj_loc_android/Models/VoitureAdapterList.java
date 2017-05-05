@@ -1,4 +1,4 @@
-package fr.eni.maj_loc_android.fr.eni.models;
+package fr.eni.maj_loc_android.Models;
 
 import android.content.Context;
 import android.support.annotation.LayoutRes;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import fr.eni.maj_loc_android.Models.Voiture;
 import fr.eni.maj_loc_android.R;
 
 /**

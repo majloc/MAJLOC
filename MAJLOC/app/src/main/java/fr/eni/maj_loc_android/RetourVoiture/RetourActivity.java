@@ -1,9 +1,7 @@
-package fr.eni.majloc;
+package fr.eni.maj_loc_android.RetourVoiture;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -11,11 +9,10 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.eni.maj_loc_android.AppActivity;
+import fr.eni.maj_loc_android.Models.Voiture;
+import fr.eni.maj_loc_android.Models.VoitureAdapterList;
 import fr.eni.maj_loc_android.R;
-import fr.eni.maj_loc_android.Reservation.NewReservationListeActivity;
-import fr.eni.maj_loc_android.fr.eni.models.Voiture;
-import fr.eni.maj_loc_android.fr.eni.models.VoitureAdapterList;
+import fr.eni.maj_loc_android.utils.AppActivity;
 
 public class RetourActivity extends AppActivity implements AdapterView.OnItemClickListener {
 

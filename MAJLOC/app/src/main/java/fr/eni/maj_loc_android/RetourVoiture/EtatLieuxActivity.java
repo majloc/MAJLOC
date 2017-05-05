@@ -1,9 +1,8 @@
-package fr.eni.majloc;
+package fr.eni.maj_loc_android.RetourVoiture;
 
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -24,10 +23,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import fr.eni.maj_loc_android.MainActivity;
-import fr.eni.maj_loc_android.NewCarActivity2;
-import fr.eni.maj_loc_android.PhotoActivity;
+import fr.eni.maj_loc_android.Models.Voiture;
 import fr.eni.maj_loc_android.R;
-import fr.eni.maj_loc_android.fr.eni.models.Voiture;
+import fr.eni.maj_loc_android.utils.PhotoActivity;
 
 public class EtatLieuxActivity extends AppCompatActivity {
 

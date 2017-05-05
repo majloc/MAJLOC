@@ -1,4 +1,4 @@
-package fr.eni.maj_loc_android.fr.eni.models;
+package fr.eni.maj_loc_android.Models;
 
 import java.util.Date;
 import java.util.List;

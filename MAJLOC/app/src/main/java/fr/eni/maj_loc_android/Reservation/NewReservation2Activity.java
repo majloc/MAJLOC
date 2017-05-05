@@ -11,10 +11,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.eni.maj_loc_android.AppActivity;
+import fr.eni.maj_loc_android.utils.AppActivity;
 import fr.eni.maj_loc_android.R;
-import fr.eni.maj_loc_android.fr.eni.models.Client;
-import fr.eni.maj_loc_android.fr.eni.models.Voiture;
+import fr.eni.maj_loc_android.Models.Client;
 
 public class NewReservation2Activity extends AppActivity {
 

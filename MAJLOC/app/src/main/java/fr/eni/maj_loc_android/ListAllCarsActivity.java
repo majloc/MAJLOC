@@ -17,8 +17,9 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.eni.maj_loc_android.fr.eni.models.Voiture;
-import fr.eni.maj_loc_android.fr.eni.models.VoitureAdapterList;
+import fr.eni.maj_loc_android.Models.Voiture;
+import fr.eni.maj_loc_android.Models.VoitureAdapterList;
+import fr.eni.maj_loc_android.utils.AppActivity;
 
 public class ListAllCarsActivity extends AppActivity implements AdapterView.OnItemClickListener {
 

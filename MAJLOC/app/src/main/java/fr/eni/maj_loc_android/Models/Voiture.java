@@ -1,7 +1,11 @@
-package fr.eni.maj_loc_android.fr.eni.models;
+package fr.eni.maj_loc_android.Models;
 
 import java.io.Serializable;
 import java.util.List;
+
+import fr.eni.maj_loc_android.Models.Agence;
+import fr.eni.maj_loc_android.Models.Energie;
+import fr.eni.maj_loc_android.Models.Type;
 
 
 public class Voiture implements Serializable {

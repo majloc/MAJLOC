@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import fr.eni.maj_loc_android.AppActivity;
+import fr.eni.maj_loc_android.utils.AppActivity;
 import fr.eni.maj_loc_android.R;
 
 public class NewReservation1_creationActivity extends AppActivity {

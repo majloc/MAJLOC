@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import fr.eni.maj_loc_android.utils.AppActivity;
+
 /**
  * Created by Administrateur on 02/05/2017.
  */

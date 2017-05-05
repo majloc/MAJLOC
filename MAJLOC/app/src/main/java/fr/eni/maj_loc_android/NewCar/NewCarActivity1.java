@@ -1,16 +1,17 @@
-package fr.eni.maj_loc_android;
+package fr.eni.maj_loc_android.NewCar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.SeekBar;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import fr.eni.maj_loc_android.utils.AppActivity;
+import fr.eni.maj_loc_android.R;
 
 public class NewCarActivity1 extends AppActivity {
 

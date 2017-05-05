@@ -1,9 +1,7 @@
 package fr.eni.maj_loc_android.Reservation;
 
-import android.app.DownloadManager;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,11 +21,10 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.eni.maj_loc_android.AppActivity;
+import fr.eni.maj_loc_android.utils.AppActivity;
 import fr.eni.maj_loc_android.R;
-import fr.eni.maj_loc_android.fr.eni.models.Client;
-import fr.eni.maj_loc_android.fr.eni.models.ClientAdapter;
-import fr.eni.maj_loc_android.fr.eni.models.Voiture;
+import fr.eni.maj_loc_android.Models.Client;
+import fr.eni.maj_loc_android.Models.ClientAdapter;
 
 public class NewReservation1Activity extends AppActivity implements AdapterView.OnItemClickListener{
 

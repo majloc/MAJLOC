@@ -11,8 +11,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import fr.eni.maj_loc_android.NewCar.NewCarActivity1;
 import fr.eni.maj_loc_android.Reservation.NewReservation1Activity;
-import fr.eni.majloc.RetourActivity;import fr.eni.maj_loc_android.fr.eni.models.ListCarsLouesActivity;
+import fr.eni.maj_loc_android.RetourVoiture.RetourActivity;
+import fr.eni.maj_loc_android.utils.AppActivity;
+
 public class MainActivity extends AppActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 

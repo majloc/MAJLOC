@@ -1,4 +1,6 @@
-package fr.eni.maj_loc_android.fr.eni.models;
+package fr.eni.maj_loc_android.Models;
+
+import fr.eni.maj_loc_android.Models.EnumType;
 
 /**
  * Created by Administrateur on 03/05/2017.

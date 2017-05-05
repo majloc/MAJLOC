@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package fr.eni.maj_loc_android;
+package fr.eni.maj_loc_android.utils;
 
 import android.app.Dialog;
 import android.content.Context;

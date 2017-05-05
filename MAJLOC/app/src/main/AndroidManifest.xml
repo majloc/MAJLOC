@@ -32,19 +32,19 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Reservation.NewReservation1_creationActivity" />
         <activity android:name=".Reservation.NewReservation2Activity" />
-        <activity android:name=".NewCarActivity1" />
-        <activity android:name=".NewCarActivity2" />
+        <activity android:name=".NewCar.NewCarActivity1" />
+        <activity android:name=".NewCar.NewCarActivity2" />
         <activity android:name=".Reservation.NewReservation1Activity" />
         <activity android:name=".Reservation.NewReservationListeActivity" />
-        <activity android:name="fr.eni.majloc.NewReservationDetailsActivity" />
+        <activity android:name=".Reservation.NewReservationDetailsActivity" />
         <activity android:name=".ListAllCarsActivity"></activity>
 
-        <activity android:name="fr.eni.majloc.RetourActivity" />
-        <activity android:name="fr.eni.majloc.EtatLieuxActivity" />
+        <activity android:name=".RetourVoiture.RetourActivity" />
+        <activity android:name=".RetourVoiture.EtatLieuxActivity" />
 
         <!-- <activity android:name=".ListAllCarsActivity"></activity> -->
 
-        <activity android:name=".PhotoActivity"
+        <activity android:name=".utils.PhotoActivity"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>    </application>
 

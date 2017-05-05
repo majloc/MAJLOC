@@ -1,4 +1,4 @@
-package fr.eni.majloc;
+package fr.eni.maj_loc_android.Reservation;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import fr.eni.maj_loc_android.R;
-import fr.eni.maj_loc_android.fr.eni.models.Voiture;
+import fr.eni.maj_loc_android.Models.Voiture;
 
 public class NewReservationDetailsActivity extends AppCompatActivity {
 
